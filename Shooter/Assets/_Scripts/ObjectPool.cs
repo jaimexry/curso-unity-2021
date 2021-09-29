@@ -19,7 +19,7 @@ public class ObjectPool : MonoBehaviour
         }
         else
         {
-            Debug.LogError("YA HAY OTRO POOL EN ESCENA");
+            Debug.LogWarning("YA HAY OTRO POOL EN ESCENA");
             Destroy(gameObject);
         }
     }
