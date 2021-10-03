@@ -2,20 +2,38 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerShooting : MonoBehaviour
 {
    
     public GameObject shootingPoint;
-    private Animator animator; 
+    private Animator animator;
+    private int bulletsAmount;
+    public int BulletsAmount
+    {
+        get => bulletsAmount;
+        set
+        {
+            bulletsAmount = value;
+            if (bulletsAmount < 0)
+            {
+                bulletsAmount = 0;
+            }
+        }
+    }
+
+    public int maxBulletsAmount;
+    public UnityEvent onBulletChanged;
     private void Start()
     {
         animator = GetComponent<Animator>();
+        bulletsAmount = maxBulletsAmount;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && bulletsAmount > 0)
         {
             animator.SetTrigger("Shoot");
             Invoke("FireBullet", 0.1f);
@@ -29,5 +47,7 @@ public class PlayerShooting : MonoBehaviour
         bullet.transform.position = shootingPoint.transform.position; 
         bullet.transform.rotation = shootingPoint.transform.rotation; 
         bullet.SetActive(true);
+        bulletsAmount--;
+        onBulletChanged.Invoke();
     }
 }
