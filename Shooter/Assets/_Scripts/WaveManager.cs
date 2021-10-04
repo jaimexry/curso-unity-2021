@@ -16,6 +16,13 @@ public class WaveManager : MonoBehaviour
     {
         get => waves.Count;
     }
+
+    private int currentWave;
+    public int CurrentWave
+    {
+        get => currentWave;
+    }
+
     private void Awake()
     {
         if (SharedInstance == null)
@@ -27,8 +34,23 @@ public class WaveManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        currentWave = 1;
     }
 
+    private void Start()
+    {
+        EnemyManager.SharedInstance.onEnemyChanged.AddListener(IncreaseCurrentWave);
+    }
+
+    private void IncreaseCurrentWave()
+    {
+        if (EnemyManager.SharedInstance.EnemyCount <= 0)
+        {
+            currentWave++;
+        }
+    }
+    
     public void AddWave(WaveSpawner wave)
     {
         waves.Add(wave);

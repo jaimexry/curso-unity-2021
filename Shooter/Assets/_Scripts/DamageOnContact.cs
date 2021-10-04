@@ -18,7 +18,6 @@ public class DamageOnContact : MonoBehaviour
         if (life != null)
         {
             life.Amount -= damage;
-            
         }
     }
 }

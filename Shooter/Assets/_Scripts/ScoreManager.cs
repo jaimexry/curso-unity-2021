@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -10,11 +11,17 @@ public class ScoreManager : MonoBehaviour
     [SerializeField]
     [Tooltip("Cantidad de Puntos de la Partida Actual")]
     private int amount;
+
+    public UnityEvent onScoreChanged;
     
     public int Amount
     {
         get => amount;
-        set => amount = value;
+        set
+        {
+            amount = value;
+            onScoreChanged.Invoke();
+        }
     }
 
     private void Awake()

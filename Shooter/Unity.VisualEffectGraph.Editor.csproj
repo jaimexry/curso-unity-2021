@@ -231,10 +231,10 @@
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Expressions\VFXExpressionBakeCurve.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Operators\Implementations\LookAt.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Operators\Implementations\Floor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Blocks\Implementations\Collision\CollisionCylinder.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Expressions\VFXExpressionTextureDim.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Blocks\Implementations\Velocity\VelocityDirection.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Contexts\Implementations\VFXBasicEvent.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Blocks\Implementations\Collision\CollisionCylinder.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Operators\Implementations\TriangleWave.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Models\Contexts\VFXContext.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualeffectgraph@11.0.0\Editor\Debug\VFXUIDebug.cs" />

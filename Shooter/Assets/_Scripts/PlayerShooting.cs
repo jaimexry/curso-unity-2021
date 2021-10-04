@@ -33,7 +33,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && bulletsAmount > 0)
+        if (Input.GetButtonDown("Fire1") && bulletsAmount > 0 && Time.timeScale > 0)
         {
             animator.SetTrigger("Shoot");
             Invoke("FireBullet", 0.1f);
