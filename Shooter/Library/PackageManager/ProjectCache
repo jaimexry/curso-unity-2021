@@ -252,6 +252,8 @@ m_ResolvedPackages:
     - 1.9.0
     - 1.10.2
     - 1.11.2
+    - 1.12.5
+    - 1.13.5
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -268,6 +270,8 @@ m_ResolvedPackages:
     - 1.9.0
     - 1.10.2
     - 1.11.2
+    - 1.12.5
+    - 1.13.5
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15

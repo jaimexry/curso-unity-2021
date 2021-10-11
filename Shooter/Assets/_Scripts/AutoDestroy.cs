@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class AutoDestroy : MonoBehaviour
 {
-    [Tooltip("Tiempo después del cual se destruye el objeto")]
-    public float destructionDelay;
+    public float time;
     // Start is called before the first frame update
-    void OnEnable()
+    void Start()
     {
-       //Destroy(gameObject, destructionDelay);
-       Invoke("HideObject", destructionDelay);
-    }
-
-    private void HideObject()
-    {
-        gameObject.SetActive(false);
+        Destroy(gameObject, time);
     }
 }

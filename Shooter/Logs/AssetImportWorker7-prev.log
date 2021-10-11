@@ -15,11 +15,11 @@ D:/Developer/Unity/Curso2021/curso-unity-2021/Shooter
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-58611
+51547
 Successfully changed project path to: D:/Developer/Unity/Curso2021/curso-unity-2021/Shooter
 D:/Developer/Unity/Curso2021/curso-unity-2021/Shooter
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 1187.32 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 623.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.18f1 (25bdc3efbc2d)
 [Subsystems] Discovering subsystems at path D:/Archivos de programa/2021.1.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,5 +35,5 @@ Initialize mono
 Mono path[0] = 'D:/Archivos de programa/2021.1.18f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Archivos de programa/2021.1.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Archivos de programa/2021.1.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56324
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
 Begin MonoManager ReloadAssembly

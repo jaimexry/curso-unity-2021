@@ -18,17 +18,17 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private Vector3 direction;
     private float mouseX;
+    private Animator _animator;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        
-
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
@@ -58,5 +58,26 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.AddRelativeForce(direction.normalized * speed * Time.fixedDeltaTime);
         rb.AddRelativeTorque(0, mouseX * rotationSpeed * Time.fixedDeltaTime, 0);
+    }
+
+    private void LateUpdate()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            _animator.SetFloat("Velocity", rb.velocity.magnitude);
+        }
+        else
+        {
+            if (Math.Abs(horizontal) < 0.01f && Math.Abs(vertical) < 0.01f)
+            {
+                _animator.SetFloat("Velocity", 0);
+            }
+            else
+            {
+                _animator.SetFloat("Velocity", 0.1f);
+            }
+        }
+        _animator.SetFloat("MoveX", horizontal);
+        _animator.SetFloat("MoveY", vertical);
     }
 }

@@ -5,24 +5,10 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public static ObjectPool SharedInstance;
     
     public GameObject prefab;
     public List<GameObject> pooledObjects;
     public int amountToPool;
-
-    private void Awake()
-    {
-        if (SharedInstance == null)
-        {
-            SharedInstance = this;
-        }
-        else
-        {
-            Debug.LogWarning("YA HAY OTRO POOL EN ESCENA");
-            Destroy(gameObject);
-        }
-    }
 
     private void Start()
     {

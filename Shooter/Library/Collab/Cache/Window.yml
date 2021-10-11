@@ -13,8 +13,777 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
-    m_Keys: []
-    m_Values: 
+    m_Keys:
+    - Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_LowSettings.lighting
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Building.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_FlagGreen.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Blue.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Gold.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Red.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Landscape.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_LightIllum.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_LightMetal.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_MountainGlow.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_Rock.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_SphereSkyReflect.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_TreeLeaves.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSkyDemoEnv_TreeTrunk.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/Landscape.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/TreeLeaves.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/TreeTrunk.mat
+    - Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/rock.mat
+    - Assets/Animations.meta
+    - Assets/Animations/DollyCart1.controller
+    - Assets/Animations/DollyCart1.controller.meta
+    - Assets/Animations/Intro_Dolly_Cart.anim
+    - Assets/Animations/Intro_Dolly_Cart.anim.meta
+    - Assets/Animators.meta
+    - Assets/Animators/Player.controller
+    - Assets/Animators/Player.controller.meta
+    - Assets/Audio.meta
+    - Assets/Audio/Ambient.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack).meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/README - 44.1
+      General Library (Samples).pdf
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/README - 44.1
+      General Library (Samples).pdf.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Sound List - 44.1
+      General Library (Samples).pdf
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Sound List - 44.1
+      General Library (Samples).pdf.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Airplane_Boeing_Fly-by_Centered_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Airplane_Boeing_Fly-by_Centered_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Ambience_BRT_Morning_C01_Town_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Ambience_BRT_Morning_C01_Town_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Ambience_Night_Wildlife_03_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Ambience_Night_Wildlife_03_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Bird_Whistling_Robin_Single_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Bird_Whistling_Robin_Single_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Biting_Crunchy_Single_Close_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Biting_Crunchy_Single_Close_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Boing_Comedic_Flexatone_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Boing_Comedic_Flexatone_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Car_Grand-Scenic_Engine_Idle_Exterior_01_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Car_Grand-Scenic_Engine_Idle_Exterior_01_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Construction_Jackhammer_Excavator_Digging_Close_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Construction_Jackhammer_Excavator_Digging_Close_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Cracking_Crunching_Branch_Short_06.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Cracking_Crunching_Branch_Short_06.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Door_Church_Closing_Locking_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Door_Church_Closing_Locking_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Door_Squeaking_Deep_02.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Door_Squeaking_Deep_02.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Door_Wooden_Closing_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Door_Wooden_Closing_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Explosion_8-bit_Small_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Explosion_8-bit_Small_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Farting_Whoopee-Cushion_Long_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Farting_Whoopee-Cushion_Long_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Concrete_Single_03.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Concrete_Single_03.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Glass_Single_07.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Glass_Single_07.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Grass_Single_04.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Grass_Single_04.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Ice_Single_A03.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Ice_Single_A03.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Leaves_Dry_Single_03.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Leaves_Dry_Single_03.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Snow_Heavy_Single_08.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Snow_Heavy_Single_08.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Snow_Light_Single_12.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Snow_Light_Single_12.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Stone_Single_15.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Footsteps_Stone_Single_15.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Metronome_168_01_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Metronome_168_01_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Printer_Laster_Very-Close_02.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Printer_Laster_Very-Close_02.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Spaceship_Fly-by_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume I/Spaceship_Fly-by_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_Hail_Light_Interior_01_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_Hail_Light_Interior_01_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_London-Waterloo_Train-Station_01_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_London-Waterloo_Train-Station_01_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_Rain_Moderate_01_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_Rain_Moderate_01_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_Seaside_Waves_Close_01_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Ambience_Seaside_Waves_Close_01_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Bubbling_Water_Large_Short_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Bubbling_Water_Large_Short_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Camera_D3300_Shutter_Single_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Camera_D3300_Shutter_Single_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Church_Bells_Ringing_Close_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Church_Bells_Ringing_Close_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Fire_Extinguish_Hissing_Steam_04.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Fire_Extinguish_Hissing_Steam_04.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Fireworks_Single_Large_04.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Fireworks_Single_Large_04.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Hammering_Nails_Multi_Close_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Hammering_Nails_Multi_Close_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Impact_Ice_Small_C07.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Impact_Ice_Small_C07.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Monster_Growling_Low_6.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Monster_Growling_Low_6.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Popping_Bottle_High_03.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Popping_Bottle_High_03.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Screaming_Roller-Coaster_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Screaming_Roller-Coaster_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Smashing_Glass_Bottle_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Smashing_Glass_Bottle_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Sneezing_Male_Single_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Sneezing_Male_Single_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Stream_Water_01_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Stream_Water_01_LOOP.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Thunder_Very-Close_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Thunder_Very-Close_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Toilet_Flush_American_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Toilet_Flush_American_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Train_British_Passing_Right-To-Left_Very-Close_01_Clip-Clop.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Train_British_Passing_Right-To-Left_Very-Close_01_Clip-Clop.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/UI_Text_Scroll_B01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/UI_Text_Scroll_B01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Vacuum-Cleaner-Hoover_02_General_Close_01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Vacuum-Cleaner-Hoover_02_General_Close_01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Water_Swirl_Small_Long_02.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Water_Swirl_Small_Long_02.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Whoosh_Fast_Badminton-Racket_A01.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Whoosh_Fast_Badminton-Racket_A01.wav.meta
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Wind_Realistic_03_LOOP.wav
+    - Assets/Audio/Ambient/44.1 General Library (Free Sample Pack)/Volume II/Wind_Realistic_03_LOOP.wav.meta
+    - Assets/Audio/Mixers.meta
+    - Assets/Audio/Mixers/MainMixer.mixer
+    - Assets/Audio/Mixers/MainMixer.mixer.meta
+    - Assets/Audio/Music.meta
+    - Assets/Audio/Music/Shooter Action Themes Volume 1 - Sample Pack.meta
+    - Assets/Audio/Music/Shooter Action Themes Volume 1 - Sample Pack/Load Theme
+      1.wav
+    - Assets/Audio/Music/Shooter Action Themes Volume 1 - Sample Pack/Load Theme
+      1.wav.meta
+    - Assets/Audio/Music/Shooter Action Themes Volume 1 - Sample Pack/Title Theme
+      1 (LOOP).wav
+    - Assets/Audio/Music/Shooter Action Themes Volume 1 - Sample Pack/Title Theme
+      1 (LOOP).wav.meta
+    - Assets/Audio/SFX.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_1.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_1.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_2.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_2.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_3.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_3.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_4.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_4.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_Load.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun1_Load.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_1.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_1.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_2.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_2.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_3.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_3.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_4.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_4.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_load.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun2_load.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_1.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_1.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_2.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_2.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_3.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_3.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_4.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_4.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_load.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun3_load.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_1.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_1.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_2.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_2.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_3.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_3.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_4.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_4.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_load.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun4_load.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_1.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_1.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_2.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_2.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_3.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_3.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_4.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_4.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_Load.wav
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/Gun5_Load.wav.meta
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/filelist.pdf
+    - Assets/Audio/SFX/Scifi Guns SFX Pack/filelist.pdf.meta
+    - Assets/Cutscenes.meta
+    - Assets/Cutscenes/Game_Intro.playable
+    - Assets/Cutscenes/Game_Intro.playable.meta
+    - Assets/Materials/Bullet_mat.mat
+    - Assets/Materials/Bullet_mat.mat.meta
+    - Assets/Materials/Chrome_mat.mat
+    - Assets/Materials/Chrome_mat.mat.meta
+    - Assets/Materials/Player_mat.physicMaterial
+    - Assets/Materials/Player_mat.physicMaterial.meta
+    - Assets/Materials/Spark_mat.mat
+    - Assets/Materials/Spark_mat.mat.meta
+    - Assets/New Terrain 1.asset
+    - Assets/New Terrain 1.asset.meta
+    - Assets/New Terrain.asset
+    - Assets/NewLayer.terrainlayer
+    - Assets/NewLayer.terrainlayer.meta
+    - Assets/Prefabs/Arena.prefab
+    - Assets/Prefabs/Bullet.prefab
+    - Assets/Prefabs/Bullet.prefab.meta
+    - Assets/Prefabs/Effects.meta
+    - Assets/Prefabs/Effects/Explosion.prefab
+    - Assets/Prefabs/Effects/Explosion.prefab.meta
+    - Assets/Prefabs/Shot Effect.prefab
+    - Assets/Prefabs/Shot Effect.prefab.meta
+    - Assets/Prefabs/ShotSFX.prefab
+    - Assets/Prefabs/ShotSFX.prefab.meta
+    - Assets/Scenes/Level1.unity
+    - Assets/Scenes/Level1/LightingData.asset
+    - Assets/Scenes/Level1/Lightmap-0_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-0_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-10_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-10_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-10_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-10_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-11_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-11_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-11_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-11_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-12_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-12_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-12_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-12_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-13_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-13_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-13_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-13_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-14_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-14_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-14_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-14_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-15_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-15_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-15_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-15_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-16_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-16_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-16_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-16_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-17_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-17_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-17_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-17_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-18_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-18_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-18_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-18_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-19_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-19_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-19_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-19_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-1_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-1_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-1_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-1_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-20_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-20_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-20_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-20_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-21_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-21_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-21_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-21_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-22_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-22_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-22_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-22_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-23_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-23_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-23_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-23_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-24_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-24_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-24_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-24_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-25_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-25_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-25_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-25_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-26_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-26_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-26_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-26_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-27_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-27_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-27_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-27_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-28_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-28_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-28_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-28_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-29_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-29_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-29_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-29_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-2_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-2_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-2_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-2_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-30_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-30_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-30_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-30_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-31_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-31_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-31_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-31_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-32_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-32_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-32_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-32_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-33_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-33_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-33_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-33_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-34_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-34_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-34_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-34_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-35_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-35_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-35_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-35_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-36_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-36_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-36_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-36_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-37_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-37_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-37_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-37_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-38_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-38_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-38_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-38_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-39_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-39_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-39_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-39_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-3_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-3_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-3_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-3_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-40_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-40_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-40_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-40_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-41_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-41_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-41_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-41_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-42_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-42_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-42_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-42_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-4_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-4_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-4_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-4_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-5_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-5_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-5_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-5_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-6_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-6_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-6_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-6_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-7_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-7_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-7_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-7_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-8_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-8_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-8_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-8_comp_light.exr.meta
+    - Assets/Scenes/Level1/Lightmap-9_comp_dir.png
+    - Assets/Scenes/Level1/Lightmap-9_comp_dir.png.meta
+    - Assets/Scenes/Level1/Lightmap-9_comp_light.exr
+    - Assets/Scenes/Level1/Lightmap-9_comp_light.exr.meta
+    - Assets/Scenes/Level1/NavMesh.asset
+    - Assets/Scenes/Level1/NavMesh.asset.meta
+    - Assets/Scenes/Level1/PPVolume Profile.asset
+    - Assets/Scenes/Level1/PPVolume Profile.asset.meta
+    - Assets/Scenes/Level1/ReflectionProbe-0.exr
+    - Assets/Scenes/Level1/ReflectionProbe-1.exr
+    - Assets/Scenes/Level1/ReflectionProbe-1.exr.meta
+    - Assets/Scenes/Level1/ReflectionProbe-2.exr
+    - Assets/Scenes/Level1/ReflectionProbe-2.exr.meta
+    - Assets/Scenes/Level1/ReflectionProbe-3.exr
+    - Assets/Scenes/Level1/ReflectionProbe-3.exr.meta
+    - Assets/Scenes/Level1/ReflectionProbe-4.exr
+    - Assets/Scenes/Level1/ReflectionProbe-4.exr.meta
+    - Assets/Scenes/LoseScene.unity
+    - Assets/Scenes/LoseScene.unity.meta
+    - Assets/Scenes/MainMenu.unity
+    - Assets/Scenes/MainMenu.unity.meta
+    - Assets/Scenes/SampleScene.unity
+    - Assets/Scenes/SampleScene.unity.meta
+    - Assets/Scenes/WinScene.unity
+    - Assets/Scenes/WinScene.unity.meta
+    - Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/Tables/desk.prefab
+    - Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/decorative_chair.prefab
+    - Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/decorative_sofa.prefab
+    - Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/pilot_seat.prefab
+    - Assets/Sci-Fi Styled Modular Pack/Prefabs/Walls/wall_big.prefab
+    - Assets/SciFiWarriorPBRHPPolyart.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/AvatarMask.mask
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/AvatarMask.mask.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Die.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Die.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_Ducking_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_Ducking_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_Shoot_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_Shoot_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_guard_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_guard_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_gunMiddle_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Idle_gunMiddle_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Jump.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Jump.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Reload.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Reload.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Run_guard_AR.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Run_guard_AR.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Run_gunMiddle_AR.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Run_gunMiddle_AR.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Shoot_AutoShot_AR.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Shoot_AutoShot_AR.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Shoot_BurstShot_AR.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Shoot_BurstShot_AR.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Shoot_SingleShot_AR.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/Shoot_SingleShot_AR.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkBack_Shoot_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkBack_Shoot_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkFront_Shoot_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkFront_Shoot_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkLeft_Shoot_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkLeft_Shoot_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkRight_Shoot_ar.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Animations/WalkRight_Shoot_ar.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animators.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Animators/SciFiWarrior.controller
+    - Assets/SciFiWarriorPBRHPPolyart/Animators/SciFiWarrior.controller.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Materials.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/HP.mat
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/HP.mat.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/PBR 1.mat
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/PBR 1.mat.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/PBR.mat
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/PBR.mat.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/Polyart.mat
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/Polyart.mat.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/Skybox_Mat.mat
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/Skybox_Mat.mat.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/Stage.mat
+    - Assets/SciFiWarriorPBRHPPolyart/Materials/Stage.mat.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Mesh.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Mesh/PBR_HP_Mesh.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Mesh/PBR_HP_Mesh.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Mesh/Polyart_Mesh.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Mesh/Polyart_Mesh.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Mesh/Stage.fbx
+    - Assets/SciFiWarriorPBRHPPolyart/Mesh/Stage.fbx.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/Enemy Variant.prefab
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/Enemy Variant.prefab.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/HPCharacter.prefab
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/HPCharacter.prefab.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/PBRCharacter.prefab
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/PBRCharacter.prefab.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/Player Variant.prefab
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/Player Variant.prefab.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/PolyartCharacter.prefab
+    - Assets/SciFiWarriorPBRHPPolyart/Prefabs/PolyartCharacter.prefab.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Scene.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Scene/DemoScene01.unity
+    - Assets/SciFiWarriorPBRHPPolyart/Scene/DemoScene01.unity.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Scene/DemoScene01Settings.lighting
+    - Assets/SciFiWarriorPBRHPPolyart/Scene/DemoScene01Settings.lighting.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/HP_Albedo.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/HP_Albedo.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Albedo.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Albedo.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_AO.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_AO.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_EM.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_EM.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_MS.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_MS.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_NM.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PBR_Free_NM.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/Polyart.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/Polyart.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PolyartEmission.png
+    - Assets/SciFiWarriorPBRHPPolyart/Textures/PolyartEmission.png.meta
+    - Assets/SciFiWarriorPBRHPPolyart/promotion.jpg
+    - Assets/SciFiWarriorPBRHPPolyart/promotion.jpg.meta
+    - Assets/Sprites.meta
+    - Assets/Sprites/1200px-LACMTA_Circle_Red_Line.svg.png
+    - Assets/Sprites/1200px-LACMTA_Circle_Red_Line.svg.png.meta
+    - Assets/Sprites/5-3d-model-humanoid-robot-proximaroyale.jpg
+    - Assets/Sprites/5-3d-model-humanoid-robot-proximaroyale.jpg.meta
+    - Assets/Sprites/Sci-Fi UI.meta
+    - Assets/Sprites/Sci-Fi UI/Demo.unity
+    - Assets/Sprites/Sci-Fi UI/Demo.unity.meta
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets.meta
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/background.meta
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/background/Materials.meta
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/background/Materials/Space.tga.mat
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/background/Materials/Space.tga.mat.meta
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/background/Space.tga.jpg
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/background/Space.tga.jpg.meta
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/scripts.meta
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs
+    - Assets/Sprites/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs.meta
+    - Assets/Sprites/Sci-Fi UI/Roboto-Thin.ttf
+    - Assets/Sprites/Sci-Fi UI/Roboto-Thin.ttf.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow1_left.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow1_left.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow1_right.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow1_right.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow_left.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow_left.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow_right.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/arrow_right.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/back_arrow.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/back_arrow.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/long_arrow_left.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/long_arrow_left.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/long_arrow_right.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/long_arrow_right.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/plus.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/arrows/plus.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/background_bar.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/background_bar.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/background_bar1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/background_bar1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_purple.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_purple.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_purple1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_purple1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_red.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_red.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_red1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/bar_red1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/progress_bar.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/progress_bar.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/progress_bar1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Bonus_Assets/bars/progress_bar1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/SciFi_Skin.guiskin
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/SciFi_Skin.guiskin.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_blue.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_blue.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_blue1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_blue1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_green.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_green.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_green1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/bar_green1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/progress_bar_background.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/progress_bar_background.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/progress_bar_background1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/bars/progress_bar_background1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/bullets.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/bullets.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/button1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/button1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/button_active.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/button_active.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/button_pushed.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/button_pushed.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/pause.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/pause.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/rocket.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/buttons/rocket.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/font.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/font/zekton free SDF.asset
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/font/zekton free SDF.asset.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/font/zekton free.ttf
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/font/zekton free.ttf.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/joystick.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/joystick/joystick.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/joystick/joystick.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/joystick/joystick_back.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/joystick/joystick_back.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/window.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/window/window_transparent.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/window/window_transparent.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/window/window_transparent1.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/Skin_Assets/window/window_transparent1.png.meta
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/atlas.png
+    - Assets/Sprites/Sci-Fi UI/_SciFi_GUISkin_/atlas.png.meta
+    - Assets/Sprites/Square.png
+    - Assets/Sprites/Square.png.meta
+    - Assets/Sprites/picture_frame_PNG216.png
+    - Assets/Sprites/picture_frame_PNG216.png.meta
+    - Assets/TextMesh Pro.meta
+    - Assets/TextMesh Pro/Documentation.meta
+    - Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+    - Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+    - Assets/TextMesh Pro/Fonts.meta
+    - Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+    - Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta
+    - Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+    - Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta
+    - Assets/TextMesh Pro/Resources.meta
+    - Assets/TextMesh Pro/Resources/Fonts & Materials.meta
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat.meta
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset.meta
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat.meta
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+    - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset.meta
+    - Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+    - Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+    - Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+    - Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta
+    - Assets/TextMesh Pro/Resources/Sprite Assets.meta
+    - Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+    - Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta
+    - Assets/TextMesh Pro/Resources/Style Sheets.meta
+    - Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+    - Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta
+    - Assets/TextMesh Pro/Resources/TMP Settings.asset
+    - Assets/TextMesh Pro/Resources/TMP Settings.asset.meta
+    - Assets/TextMesh Pro/Shaders.meta
+    - Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader
+    - Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+    - Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
+    - Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+    - Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+    - Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta
+    - Assets/TextMesh Pro/Shaders/TMPro.cginc
+    - Assets/TextMesh Pro/Shaders/TMPro.cginc.meta
+    - Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
+    - Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta
+    - Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
+    - Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta
+    - Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
+    - Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta
+    - Assets/TextMesh Pro/Sprites.meta
+    - Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt
+    - Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta
+    - Assets/TextMesh Pro/Sprites/EmojiOne.json
+    - Assets/TextMesh Pro/Sprites/EmojiOne.json.meta
+    - Assets/TextMesh Pro/Sprites/EmojiOne.png
+    - Assets/TextMesh Pro/Sprites/EmojiOne.png.meta
+    - Assets/Textures/spark.jpg
+    - Assets/Textures/spark.jpg.meta
+    - Assets/_Scripts.meta
+    - Assets/_Scripts/AutoDestroy.cs
+    - Assets/_Scripts/AutoDestroy.cs.meta
+    - Assets/_Scripts/AutoHide.cs
+    - Assets/_Scripts/AutoHide.cs.meta
+    - Assets/_Scripts/DamageOnContact.cs
+    - Assets/_Scripts/DamageOnContact.cs.meta
+    - Assets/_Scripts/EnemiesUI.cs
+    - Assets/_Scripts/EnemiesUI.cs.meta
+    - Assets/_Scripts/Enemy.cs
+    - Assets/_Scripts/Enemy.cs.meta
+    - Assets/_Scripts/EnemyFSM.cs
+    - Assets/_Scripts/EnemyFSM.cs.meta
+    - Assets/_Scripts/EnemyManager.cs
+    - Assets/_Scripts/EnemyManager.cs.meta
+    - Assets/_Scripts/GameModeWaves.cs
+    - Assets/_Scripts/GameModeWaves.cs.meta
+    - Assets/_Scripts/Life.cs
+    - Assets/_Scripts/Life.cs.meta
+    - Assets/_Scripts/LifeBar.cs
+    - Assets/_Scripts/LifeBar.cs.meta
+    - Assets/_Scripts/MoveForward.cs
+    - Assets/_Scripts/MoveForward.cs.meta
+    - Assets/_Scripts/ObjectPool.cs
+    - Assets/_Scripts/ObjectPool.cs.meta
+    - Assets/_Scripts/Pause.cs
+    - Assets/_Scripts/Pause.cs.meta
+    - Assets/_Scripts/PlayerBulletsUI.cs
+    - Assets/_Scripts/PlayerBulletsUI.cs.meta
+    - Assets/_Scripts/PlayerMovement.cs
+    - Assets/_Scripts/PlayerMovement.cs.meta
+    - Assets/_Scripts/PlayerShooting.cs
+    - Assets/_Scripts/PlayerShooting.cs.meta
+    - Assets/_Scripts/ScoreManager.cs
+    - Assets/_Scripts/ScoreManager.cs.meta
+    - Assets/_Scripts/ScoreUI.cs
+    - Assets/_Scripts/ScoreUI.cs.meta
+    - Assets/_Scripts/Sight.cs
+    - Assets/_Scripts/Sight.cs.meta
+    - Assets/_Scripts/SimpleCameraController.cs
+    - Assets/_Scripts/SimpleCameraController.cs.meta
+    - Assets/_Scripts/WaveManager.cs
+    - Assets/_Scripts/WaveManager.cs.meta
+    - Assets/_Scripts/WaveSpawner.cs
+    - Assets/_Scripts/WaveSpawner.cs.meta
+    - Assets/_Scripts/WavesUI.cs
+    - Assets/_Scripts/WavesUI.cs.meta
+    - Packages/manifest.json
+    - Packages/packages-lock.json
+    - ProjectSettings/DynamicsManager.asset
+    - ProjectSettings/EditorBuildSettings.asset
+    - ProjectSettings/InputManager.asset
+    - ProjectSettings/TagManager.asset
+    - 
+    m_Values: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
