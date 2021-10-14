@@ -41,12 +41,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\NavMeshAnimator.cs" />
      <Compile Include="Assets\_Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\_Scripts\Pause.cs" />
+     <Compile Include="Assets\_Scripts\EnemyCanvas.cs" />
      <Compile Include="Assets\_Scripts\MoveForward.cs" />
      <Compile Include="Assets\_Scripts\WavesUI.cs" />
      <Compile Include="Assets\_Scripts\Enemy.cs" />
      <Compile Include="Assets\_Scripts\ScoreUI.cs" />
+     <Compile Include="Assets\_Scripts\Weapon.cs" />
      <Compile Include="Assets\_Scripts\DamageOnContact.cs" />
      <Compile Include="Assets\_Scripts\PlayerShooting.cs" />
      <Compile Include="Assets\_Scripts\SimpleCameraController.cs" />
@@ -57,16 +60,16 @@
      <Compile Include="Assets\_Scripts\ScoreManager.cs" />
      <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\_Scripts\ObjectPool.cs" />
+     <Compile Include="Assets\_Scripts\Menus.cs" />
      <Compile Include="Assets\_Scripts\PlayerBulletsUI.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Sprites\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
+     <Compile Include="Assets\_Scripts\EnemyFSM.cs" />
      <Compile Include="Assets\_Scripts\EnemyManager.cs" />
      <Compile Include="Assets\_Scripts\Sight.cs" />
      <Compile Include="Assets\_Scripts\WaveManager.cs" />
      <Compile Include="Assets\_Scripts\EnemiesUI.cs" />
      <Compile Include="Assets\_Scripts\AutoDestroy.cs" />
-     <Compile Include="Assets\_Scripts\EnemyFSM.cs" />
-     <Compile Include="Assets\_Scripts\EnemyCanvas.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

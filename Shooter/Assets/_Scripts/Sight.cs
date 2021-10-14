@@ -12,10 +12,16 @@ public class Sight : MonoBehaviour
     public LayerMask targetLayers;
 
     public Collider detectedTarget;
-    
+
+    private Collider[] colliders;
     private void Update()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, distance, targetLayers);
+        if (Physics.OverlapSphereNonAlloc(transform.position, distance, colliders, targetLayers) == 0)
+        {
+            return;
+        }
+        
+        colliders = Physics.OverlapSphere(transform.position, distance, targetLayers);
         detectedTarget = null;
         
         foreach (Collider collider in colliders)

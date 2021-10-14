@@ -11,6 +11,7 @@ public class Life : MonoBehaviour
     [SerializeField]    
     private float maxAmount;
     public UnityEvent onDeath;
+
     public float Amount
     {
         get => amount;

@@ -16,10 +16,11 @@ public class EnemiesUI : MonoBehaviour
     private void Start()
     {
         EnemyManager.SharedInstance.onEnemyChanged.AddListener(ReloadEnemies);
+        ReloadEnemies();
     }
 
     private void ReloadEnemies()
     {
-        _text.text = "ENEMIES REMAINING: " + EnemyManager.SharedInstance.EnemyCount;
+        _text.text = string.Format("ENEMIES REMAINING: {0}", EnemyManager.SharedInstance.EnemyCount);
     }
 }

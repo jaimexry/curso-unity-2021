@@ -16,11 +16,11 @@ public class ScoreUI : MonoBehaviour
     private void Start()
     {
         ScoreManager.SharedInstance.onScoreChanged.AddListener(ReloadScore);
-        _text.text = "SCORE: " + ScoreManager.SharedInstance.Amount;
+        ReloadScore();
     }
 
     private void ReloadScore()
     {
-        _text.text = "SCORE: " + ScoreManager.SharedInstance.Amount;
+        _text.text = string.Format("SCORE: {0}", ScoreManager.SharedInstance.Amount);
     }
 }

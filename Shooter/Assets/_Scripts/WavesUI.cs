@@ -16,10 +16,11 @@ public class WavesUI : MonoBehaviour
     private void Start()
     {
         WaveManager.SharedInstance.onWaveChanged.AddListener(ReloadWaves);
+        ReloadWaves();
     }
 
     private void ReloadWaves()
     {
-        _text.text = "WAVE: " + WaveManager.SharedInstance.CurrentWave;
+        _text.text = string.Format("WAVE: {0}", WaveManager.SharedInstance.CurrentWave);
     }
 }

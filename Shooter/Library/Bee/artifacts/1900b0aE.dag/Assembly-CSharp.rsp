@@ -353,7 +353,9 @@
 "Assets/_Scripts/GameModeWaves.cs"
 "Assets/_Scripts/Life.cs"
 "Assets/_Scripts/LifeBar.cs"
+"Assets/_Scripts/Menus.cs"
 "Assets/_Scripts/MoveForward.cs"
+"Assets/_Scripts/NavMeshAnimator.cs"
 "Assets/_Scripts/ObjectPool.cs"
 "Assets/_Scripts/Pause.cs"
 "Assets/_Scripts/PlayerBulletsUI.cs"
@@ -366,6 +368,7 @@
 "Assets/_Scripts/WaveManager.cs"
 "Assets/_Scripts/WaveSpawner.cs"
 "Assets/_Scripts/WavesUI.cs"
+"Assets/_Scripts/Weapon.cs"
 -langversion:8.0
 
 /deterministic

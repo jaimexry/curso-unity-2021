@@ -15,11 +15,11 @@ public class PlayerBulletsUI : MonoBehaviour
    private void Start()
    {
       targetShooting.onBulletChanged.AddListener(ReloadBulletText);
-      _text.text = "" + targetShooting.maxBulletsAmount + "/" + targetShooting.maxBulletsAmount; 
+      _text.text = string.Format("{0}/{1}", targetShooting.maxBulletsAmount, targetShooting.maxBulletsAmount); 
    }
 
    private void ReloadBulletText()
    {
-      _text.text = "" + targetShooting.BulletsAmount + "/" + targetShooting.maxBulletsAmount; 
+      _text.text = string.Format("{0}/{1}", targetShooting.BulletsAmount, targetShooting.maxBulletsAmount); 
    }
 }

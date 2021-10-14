@@ -15,24 +15,20 @@ public class EnemyFSM : MonoBehaviour
     private Transform baseTransform;
     public float baseAttackDistance;
     public float playerAttackDistance;
-
     private NavMeshAgent _agent;
-    private ObjectPool bulletPool;
-    private ObjectPool shotFSXPool;
-    private float lastShotTime;
-    public float shootRate;
-    
+
+    private Animator _animator;
+    public Weapon weapon;
     private void Awake()
     {
         _sight = GetComponent<Sight>();
         _agent = GetComponentInParent<NavMeshAgent>();
+        _animator = GetComponentInParent<Animator>();
     }
 
     private void Start()
     {
         baseTransform = GameObject.FindWithTag("Base").transform;
-        bulletPool = GameObject.Find("BulletPooling").GetComponent<ObjectPool>();
-        shotFSXPool = GameObject.Find("ShotVFXPooling").GetComponent<ObjectPool>();
     }
 
     private void Update()
@@ -63,7 +59,7 @@ public class EnemyFSM : MonoBehaviour
 
     void GoToBase()
     {
-        print("Ir a base");
+        //print("Ir a base");
         _agent.isStopped = false;
         _agent.SetDestination(baseTransform.position);
         
@@ -82,7 +78,7 @@ public class EnemyFSM : MonoBehaviour
 
     void AttackBase()
     {
-        print("Atacar la base enemiga");
+        //print("Atacar la base enemiga");
         _agent.isStopped = true;
         LookAt(baseTransform.position);
         ShootTarget();
@@ -90,7 +86,7 @@ public class EnemyFSM : MonoBehaviour
 
     void ChasePlayer()
     {
-        print("Perseguir al jugador");
+        //print("Perseguir al jugador");
 
         if (_sight.detectedTarget == null)
         {
@@ -110,7 +106,7 @@ public class EnemyFSM : MonoBehaviour
 
     void AttackPlayer()
     {
-        print("Atacar al jugador");
+        //print("Atacar al jugador");
         _agent.isStopped = true;
 
         if (_sight.detectedTarget == null)
@@ -139,27 +135,9 @@ public class EnemyFSM : MonoBehaviour
 
     void ShootTarget()
     {
-        if (Time.timeScale > 0)
+        if (weapon.ShootBullet("Enemy Bullet"))
         {
-            var timeSinceLastShot = Time.time - lastShotTime;
-            if (timeSinceLastShot < shootRate)
-            {
-                return;
-            }
-
-            lastShotTime = Time.time;
-            var bullet = bulletPool.GetFirstPooledObject();
-            
-            bullet.layer = LayerMask.NameToLayer("Enemy Bullet");
-            bullet.transform.position = transform.position;
-            bullet.transform.rotation = transform.rotation;
-            bullet.SetActive(true);
-
-            var shotSFX = shotFSXPool.GetFirstPooledObject();
-            shotSFX.transform.position = transform.position;
-            shotSFX.transform.rotation = transform.rotation;
-            shotSFX.SetActive(true);
-            shotSFX.GetComponent<AudioSource>().Play();
+            _animator.SetTrigger("Shoot");
         }
     }
 
