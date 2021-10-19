@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41b1f203ec3ec94b92e6f7061ce7342, type: 3}
+  m_Name: DobleBofeton
+  m_EditorClassIdentifier: 
+  id: 3
+  _name: "Doble Bofet\xF3n"
+  description: El enemigo es abofeteado repetidamente, de un lado a otro, de dos
+    a cinco veces seguidas.
+  type: 1
+  power: 15
+  accuracy: 85
+  pp: 10
+  category: 0

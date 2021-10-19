@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
+  m_Name: Charmeleon
+  m_EditorClassIdentifier: 
+  ID: 5
+  _name: Charmeleon
+  description: "En las monta\xF1as rocosas donde viven los Charmeleon, sus colas
+    ardientes brillan como estrellas."
+  frontSprite: {fileID: 21300000, guid: 480564a36574def408f3ca087c5cea8d, type: 3}
+  backSprite: {fileID: 21300000, guid: 614cf1cf918c03345ac0495b36d192e9, type: 3}
+  type1: 2
+  type2: 0
+  maxHp: 58
+  attack: 64
+  defense: 58
+  spAttack: 80
+  spDefense: 65
+  speed: 80

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
+  m_Name: Blastoise
+  m_EditorClassIdentifier: 
+  ID: 9
+  _name: Blastoise
+  description: "Los chorros de agua que lanza por los tubos de su caparaz\xF3n pueden
+    atravesar el acero."
+  frontSprite: {fileID: 21300000, guid: fe66b7fa0d5baf448a8357e98c2b6e5d, type: 3}
+  backSprite: {fileID: 21300000, guid: cbaa3d249eba7f34c99db597d87bcdab, type: 3}
+  type1: 3
+  type2: 0
+  maxHp: 79
+  attack: 83
+  defense: 100
+  spAttack: 85
+  spDefense: 105
+  speed: 78
