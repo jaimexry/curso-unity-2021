@@ -108,6 +108,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
 -r:"D:/Archivos de programa/2021.1.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/Archivos de programa/2021.1.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"D:/Archivos de programa/2021.1.18f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
@@ -302,6 +303,7 @@
 -r:"D:/Archivos de programa/2021.1.18f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 -r:"D:/Developer/Unity/Curso2021/curso-unity-2021/Pokymon/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 -r:"D:/Developer/Unity/Curso2021/curso-unity-2021/Pokymon/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-firstpass.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Animation.Runtime.ref.dll"
@@ -346,11 +348,16 @@
 "Assets/_Scripts/Battle/BattleManager.cs"
 "Assets/_Scripts/Battle/BattleUnit.cs"
 "Assets/_Scripts/Battle/HealthBar.cs"
+"Assets/_Scripts/Battle/PartyHUD.cs"
+"Assets/_Scripts/Battle/PartyMemberHUD.cs"
+"Assets/_Scripts/GameManager.cs"
 "Assets/_Scripts/Moves/Move.cs"
 "Assets/_Scripts/Moves/MoveBase.cs"
-"Assets/_Scripts/PlayerController.cs"
+"Assets/_Scripts/Player/PlayerController.cs"
 "Assets/_Scripts/Pokymon/Pokymon.cs"
 "Assets/_Scripts/Pokymon/PokymonBase.cs"
+"Assets/_Scripts/Pokymon/PokymonMapArea.cs"
+"Assets/_Scripts/Pokymon/PokymonParty.cs"
 -langversion:8.0
 
 /deterministic
