@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Blastoise
   m_EditorClassIdentifier: 
-  ID: 9
+  id: 9
   _name: Blastoise
   description: "Los chorros de agua que lanza por los tubos de su caparaz\xF3n pueden
     atravesar el acero."
@@ -26,3 +26,13 @@ MonoBehaviour:
   spAttack: 85
   spDefense: 105
   speed: 78
+  expBase: 210
+  catchRate: 45
+  growthRate: 3
+  learnableMoves:
+  - move: {fileID: 11400000, guid: 20163bae2088de44a97540d8a9bc2545, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 5d12fffba1631c54999316b69226ef5a, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 6b4d4bc90cb301e40a25423127cbc0c4, type: 2}
+    level: 1

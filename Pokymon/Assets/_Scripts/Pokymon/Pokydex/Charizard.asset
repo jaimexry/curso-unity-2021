@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Charizard
   m_EditorClassIdentifier: 
-  ID: 6
+  id: 6
   _name: Charizard
   description: "Se dice que el fuego de Charizard arde con m\xE1s fuerza si ha vivido
     duras batallas."
@@ -26,3 +26,13 @@ MonoBehaviour:
   spAttack: 109
   spDefense: 85
   speed: 100
+  expBase: 209
+  catchRate: 45
+  growthRate: 3
+  learnableMoves:
+  - move: {fileID: 11400000, guid: a9cb07f464d5e3241a99c5a9536bdb2b, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 6877cb6ae2643a54ab47302cea2a66eb, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 73a3904178df52046951cb4c193a6af1, type: 2}
+    level: 1

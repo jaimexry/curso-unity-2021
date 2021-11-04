@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Charmander
   m_EditorClassIdentifier: 
-  id: 0
+  id: 4
   _name: Charmander
   description: "La llama de la punta de su cola indica su salud. Si Charmander est\xE1
     sano, arder\xE1 con m\xE1s fuerza."
@@ -26,6 +26,9 @@ MonoBehaviour:
   spAttack: 60
   spDefense: 50
   speed: 65
+  expBase: 65
+  catchRate: 45
+  growthRate: 3
   learnableMoves:
   - move: {fileID: 11400000, guid: a9cb07f464d5e3241a99c5a9536bdb2b, type: 2}
     level: 1
@@ -33,3 +36,7 @@ MonoBehaviour:
     level: 1
   - move: {fileID: 11400000, guid: 73a3904178df52046951cb4c193a6af1, type: 2}
     level: 7
+  - move: {fileID: 11400000, guid: a86f80c72077c714087220332f7fb4da, type: 2}
+    level: 10
+  - move: {fileID: 11400000, guid: 57e4561104bb37f449bc2cc5726c0b04, type: 2}
+    level: 16

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 10
   _name: "Ara\xF1azo"
-  description: "Garras duras, puntiagudas y afiladas rastrillan al enemigo para infligir
-    da\xF1o."
+  description: "Ara\xF1a con afiladas garras."
   type: 1
   power: 40
+  fixedPower: 0
   accuracy: 100
   pp: 35
   category: 0

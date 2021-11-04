@@ -19,6 +19,9 @@ public class MoveBase : ScriptableObject
     
     [SerializeField] private int power;
     public int Power => power;
+
+    [SerializeField] private int fixedPower;
+    public int FixedPower => fixedPower;
     
     [SerializeField] private int accuracy;
     public int Accuracy => accuracy;

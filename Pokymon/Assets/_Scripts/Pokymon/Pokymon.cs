@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -21,9 +23,21 @@ public class Pokymon
     public int Hp
     {
         get => _hp;
-        set => _hp = value;
+        set
+        {
+            _hp = value;
+            _hp = Mathf.FloorToInt(Mathf.Clamp(_hp, 0, MaxHp));
+        }
     }
-    
+
+    private int _experience;
+
+    public int Experience
+    {
+        get => _experience;
+        set => _experience = value;
+    }
+
     private List<Move> _moves;
     public List<Move> Moves
     {
@@ -37,11 +51,18 @@ public class Pokymon
     public int SpDefense => Mathf.FloorToInt((_base.SpDefense * _level) / 20.0f) + 1;
     public int Speed => Mathf.FloorToInt((_base.Speed * _level) / 20.0f) + 1;
 
+    public Pokymon(PokymonBase pBase, int pLevel)
+    {
+        _base = pBase;
+        _level = pLevel;
+        InitPokymon();
+    }
+    
     public void InitPokymon()
     {
         
         _hp = MaxHp;
-        
+        _experience = Base.GetNecessaryExpForLevel(_level);
         _moves = new List<Move>();
 
         foreach (var learnableMove in _base.LearnableMoves)
@@ -51,7 +72,7 @@ public class Pokymon
                 _moves.Add(new Move(learnableMove.Move));
             }
 
-            if (_moves.Count >= 4)
+            if (_moves.Count >= PokymonBase.NUMBER_OF_LEARNABLE_MOVES)
             {
                 break;
             }
@@ -72,7 +93,62 @@ public class Pokymon
 
     public Move RandomMove()
     {
-        int randId = Random.Range(0, Moves.Count);
-        return Moves[randId];
+        var movesWithPP = Moves.Where(m => m.PP > 0).ToList();
+        if (movesWithPP.Count > 0)
+        {
+            int randId = Random.Range(0, movesWithPP.Count);
+            return movesWithPP[randId];
+        }
+        return null;
+    }
+
+    public bool ReceiveAutoDamage()
+    {
+        Hp -= (MaxHp / 15) + 1;
+        if (Hp <= 0)
+        {
+            Hp = 0;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool CheckIfHasMovesWithPP()
+    {
+        var movesWithPP = Moves.Where(m => m.PP > 0).ToList();
+        if (movesWithPP.Count > 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool NeedsToLevelUp()
+    {
+        if (Experience > Base.GetNecessaryExpForLevel(_level + 1))
+        {
+            int currentMaxHp = MaxHp;
+            _level++;
+            Hp += (MaxHp - currentMaxHp);
+            return true;
+        }
+
+        return false;
+    }
+
+    public LearnableMove GetLearnableMoveAtCurrentLevel()
+    {
+        return Base.LearnableMoves.Where(lm => lm.Level == _level).FirstOrDefault();
+    }
+
+    public void LearnMove(LearnableMove learnableMove)
+    {
+        if (Moves.Count >= PokymonBase.NUMBER_OF_LEARNABLE_MOVES)
+        {
+            return;
+        }
+        Moves.Add(new Move(learnableMove.Move));
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Wartortle
   m_EditorClassIdentifier: 
-  ID: 8
+  id: 8
   _name: Wartortle
   description: "Se dice que vive 10000 a\xF1os. Su peluda cola es un s\xEDmbolo de
     longevidad."
@@ -26,3 +26,13 @@ MonoBehaviour:
   spAttack: 65
   spDefense: 80
   speed: 58
+  expBase: 143
+  catchRate: 45
+  growthRate: 3
+  learnableMoves:
+  - move: {fileID: 11400000, guid: 20163bae2088de44a97540d8a9bc2545, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 5d12fffba1631c54999316b69226ef5a, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 6b4d4bc90cb301e40a25423127cbc0c4, type: 2}
+    level: 1

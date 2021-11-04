@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckForPokymon()
     {
-        if (Physics2D.OverlapCircle(transform.position, 0.25f, pokymonLayer) != null)
+        if (Physics2D.OverlapCircle(transform.position - new Vector3(0, 0.2f), 0.25f, pokymonLayer) != null)
         {
             if (Random.Range(0, 100) < 10)
             {

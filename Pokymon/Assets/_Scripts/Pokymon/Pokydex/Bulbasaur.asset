@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Bulbasaur
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   _name: Bulbasaur
   description: "Despu\xE9s de nacer, crece aliment\xE1ndose de las semillas de su
     lomo."
@@ -26,6 +26,9 @@ MonoBehaviour:
   spAttack: 65
   spDefense: 65
   speed: 45
+  expBase: 6400
+  catchRate: 45
+  growthRate: 3
   learnableMoves:
   - move: {fileID: 11400000, guid: 20163bae2088de44a97540d8a9bc2545, type: 2}
     level: 1

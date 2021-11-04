@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 52
   _name: Ascuas
-  description: "El enemigo es atacado con peque\xF1as llamas. El objetivo tambi\xE9n
-    puede quedar con una quemadura."
+  description: "Ataque con llamas peque\xF1as que pueden causar quemaduras."
   type: 2
   power: 40
+  fixedPower: 0
   accuracy: 100
   pp: 25
   category: 1

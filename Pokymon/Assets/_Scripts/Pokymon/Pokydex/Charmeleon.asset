@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Charmeleon
   m_EditorClassIdentifier: 
-  ID: 5
+  id: 5
   _name: Charmeleon
   description: "En las monta\xF1as rocosas donde viven los Charmeleon, sus colas
     ardientes brillan como estrellas."
@@ -26,3 +26,13 @@ MonoBehaviour:
   spAttack: 80
   spDefense: 65
   speed: 80
+  expBase: 142
+  catchRate: 45
+  growthRate: 3
+  learnableMoves:
+  - move: {fileID: 11400000, guid: a9cb07f464d5e3241a99c5a9536bdb2b, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 6877cb6ae2643a54ab47302cea2a66eb, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 73a3904178df52046951cb4c193a6af1, type: 2}
+    level: 1

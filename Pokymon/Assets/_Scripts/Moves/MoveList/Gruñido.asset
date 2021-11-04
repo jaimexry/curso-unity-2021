@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 45
   _name: "Gru\xF1ido"
-  description: "El usuario gru\xF1e de una manera entra\xF1able, haciendo que el
-    enemigo sea menos cauteloso. Se reduce la estad\xEDstica de ataque del objetivo."
+  description: "Dulce gru\xF1ido que reduce el Ataque del contrincante."
   type: 1
   power: 0
+  fixedPower: 0
   accuracy: 100
   pp: 40
   category: 2

@@ -72,4 +72,22 @@ public class BattleUnit : MonoBehaviour
         seq.Append(pokymonImage.transform.DOLocalMoveY(initialPosition.y - 200, dieTimeAnim));
         seq.Join(pokymonImage.DOFade(0, dieTimeAnim));
     }
+    
+    public IEnumerator PlayCapturedAnimation()
+    {
+        var seq = DOTween.Sequence();
+        seq.Append(pokymonImage.DOFade(0, 0.5f));
+        seq.Join(transform.DOScale(new Vector3(0.25f, 0.25f, 1f), 0.5f));
+        seq.Join(transform.DOLocalMoveY(initialPosition.y + 50f, 0.5f));
+        yield return seq.WaitForCompletion();
+    }
+    
+    public IEnumerator PlayBreakOutAnimation()
+    {
+        var seq = DOTween.Sequence();
+        seq.Append(pokymonImage.DOFade(1, 0.5f));
+        seq.Join(transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f));
+        seq.Join(transform.DOLocalMoveY(initialPosition.y, 0.5f));
+        yield return seq.WaitForCompletion();
+    }
 }

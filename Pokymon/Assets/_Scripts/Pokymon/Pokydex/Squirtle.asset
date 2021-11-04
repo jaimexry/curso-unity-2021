@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Squirtle
   m_EditorClassIdentifier: 
-  id: 0
+  id: 7
   _name: Squirtle
   description: "Se protege con su caparaz\xF3n y luego contraataca lanzando agua
     a presi\xF3n cuando tiene oportunidad."
@@ -26,6 +26,9 @@ MonoBehaviour:
   spAttack: 50
   spDefense: 64
   speed: 43
+  expBase: 66
+  catchRate: 45
+  growthRate: 3
   learnableMoves:
   - move: {fileID: 11400000, guid: 20163bae2088de44a97540d8a9bc2545, type: 2}
     level: 1

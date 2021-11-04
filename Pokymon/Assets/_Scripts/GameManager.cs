@@ -30,7 +30,10 @@ public class GameManager : MonoBehaviour
         battleManager.gameObject.SetActive(true);
         var playerParty = playerController.GetComponent<PokymonParty>();
         var wildPokymon = FindObjectOfType<PokymonMapArea>().GetComponent<PokymonMapArea>().GetRandomWildPokymon();
-        battleManager.HandleStartBattle(playerParty, wildPokymon);
+
+        var wildPokymonCopy = new Pokymon(wildPokymon.Base, wildPokymon.Level);
+        
+        battleManager.HandleStartBattle(playerParty, wildPokymonCopy);
     }
 
     private void FinishPokymonBattle(bool playerHasWon)

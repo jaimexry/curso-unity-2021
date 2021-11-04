@@ -10,9 +10,10 @@ public class PartyHUD : MonoBehaviour
 
     private List<Pokymon> pokymons;
     [SerializeField] private float charactersPerSecond;
+    public bool isWriting;
     public void InitPartyHUD()
     {
-        memberHuds = GetComponentsInChildren<PartyMemberHUD>();
+        memberHuds = GetComponentsInChildren<PartyMemberHUD>(true);
     }
 
     public void SetPartyData(List<Pokymon> pokymons)
@@ -45,11 +46,13 @@ public class PartyHUD : MonoBehaviour
     public IEnumerator SetMessage(string message)
     {
         messageText.text = "";
-
+        isWriting = true;
         foreach (var character in message)
         {
             messageText.text += character;
             yield return new WaitForSeconds(1 / charactersPerSecond);
         }
+
+        isWriting = false;
     }
 }

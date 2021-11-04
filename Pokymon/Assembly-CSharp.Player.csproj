@@ -45,6 +45,7 @@
      <Compile Include="Assets\_Scripts\Battle\PartyHUD.cs" />
      <Compile Include="Assets\_Scripts\Moves\Move.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
+     <Compile Include="Assets\_Scripts\Battle\SelectionMovementUI.cs" />
      <Compile Include="Assets\_Scripts\Battle\BattleUnit.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\_Scripts\Moves\MoveBase.cs" />

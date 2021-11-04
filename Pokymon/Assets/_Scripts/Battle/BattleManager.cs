@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
 using Random = UnityEngine.Random;
@@ -13,8 +15,17 @@ public enum BattleState
     PerformMovement,
     ChoosingObject,
     ChoosingPokemon,
+    ForgetMovement,
     Busy,
+    LoseTurn,
     FinishBattle
+}
+
+public enum BattleType
+{
+    WildPokymon,
+    Trainer,
+    Leader
 }
 
 public class BattleManager : MonoBehaviour
@@ -23,6 +34,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private BattleUnit enemyUnit;
     [SerializeField] private BattleDialogBox battleDialogBox;
     [SerializeField] private PartyHUD partyHud;
+    [SerializeField] private SelectionMovementUI selectMoveUI;
+    [SerializeField] private GameObject pokeball;
     public event Action<bool> OnBattleFinish;
     private int currentSelectedAction;
     private int currentSelectedMovement;
@@ -34,18 +47,27 @@ public class BattleManager : MonoBehaviour
     private float effectiveness;
     private bool actionSelected, moveSelected;
     private bool hasChangedPokymon;
-    private float timeSinceLastSubmit;
     private bool pokemonFainted;
     public BattleState state;
-
+    public BattleType type;
     private PokymonParty playerParty;
     private Pokymon wildPokymon;
+    private bool hasThrownAPokeball;
+    private int escapeAttemps;
+    private MoveBase moveToLearn;
     
     public void HandleStartBattle(PokymonParty playerParty, Pokymon wildPokymon)
     {
+        type = BattleType.WildPokymon;
         this.playerParty = playerParty;
         this.wildPokymon = wildPokymon;
         StartCoroutine(SetupBattle());
+    }
+
+    public void HandleStartTrainerBattle(PokymonParty playerParty, PokymonParty trainerParty, bool isLeader)
+    {
+        type = (isLeader ? BattleType.Leader : BattleType.Trainer);
+        //TODO: El resto de batalla contra NPC
     }
 
     private IEnumerator SetupBattle()
@@ -53,9 +75,11 @@ public class BattleManager : MonoBehaviour
         state = BattleState.StartBattle;
 
         playerUnit.SetupPokymon(playerParty.GetFirstHealthyPokymon());
-        
+        hasThrownAPokeball = false;
+        hasChangedPokymon = false;
+        escapeAttemps = 0;
         battleDialogBox.SetPokymonMovements(playerUnit.Pokymon.Moves);
-        
+        enemyUnit.transform.localScale = new Vector3(1f, 1f, 1f);
         enemyUnit.SetupPokymon(wildPokymon);
         partyHud.InitPartyHUD();
         partyHud.gameObject.SetActive(false);
@@ -104,7 +128,8 @@ public class BattleManager : MonoBehaviour
     private void OpenInventoryScreen()
     {
         state = BattleState.ChoosingObject;
-        print("Abrir la pantalla de inventario");
+        battleDialogBox.ToggleActions(false);
+        StartCoroutine(ThrowPokeball());
         if (Input.GetAxisRaw("Cancel") != 0)
         {
             timeSinceLastClick = 0;
@@ -115,7 +140,11 @@ public class BattleManager : MonoBehaviour
     public void HandleUpdate()
     {
         timeSinceLastClick += Time.deltaTime;
-        timeSinceLastSubmit += Time.deltaTime;
+
+        if (timeSinceLastClick < timeBetweenClicks || battleDialogBox.isWriting || partyHud.isWriting)
+        {
+            return;
+        }
         
         if (state == BattleState.ActionSelection)
         {
@@ -129,15 +158,27 @@ public class BattleManager : MonoBehaviour
         }else if (state == BattleState.ChoosingPokemon)
         {
             HandlePlayerPartySelection();
+        }else if (state == BattleState.LoseTurn)
+        {
+            StartCoroutine(PerformEnemyMovement());
+        }else if (state == BattleState.ForgetMovement)
+        {
+            selectMoveUI.HandleForgetMoveSelection(
+                (moveIndex) =>
+            {
+                if (moveIndex < 0)
+                {
+                    timeSinceLastClick = 0;
+                    return;
+                }
+
+                StartCoroutine(ForgetOldMove(moveIndex));
+            });
         }
     }
 
     private void HandlePlayerActionSelection()
     {
-        if (timeSinceLastClick < timeBetweenClicks)
-        {
-            return;
-        }
         if (Input.GetAxisRaw("Vertical") != 0)
         {
             timeSinceLastClick = 0;
@@ -168,19 +209,13 @@ public class BattleManager : MonoBehaviour
                 OpenInventoryScreen();
             }else
             {
-                battleDialogBox.ToggleActions(false);
-                BattleFinish(false);
+                StartCoroutine(TryToEscapeFromBattle());
             }
         }
     }
 
     private void HandlePlayerMovementSelection()
     {
-        if (timeSinceLastClick < timeBetweenClicks)
-        {
-            return;
-        }
-
         if (Input.GetAxisRaw("Vertical") != 0)
         {
             timeSinceLastClick = 0;
@@ -218,14 +253,7 @@ public class BattleManager : MonoBehaviour
             timeSinceLastClick = 0;
             battleDialogBox.ToggleMovements(false);
             battleDialogBox.ToggleDialogText(true);
-            if (enemyUnit.Pokymon.Speed <= playerUnit.Pokymon.Speed)
-            {
-                StartCoroutine(PerformPlayerMovement());
-            }
-            else
-            {
-                StartCoroutine(PerformEnemyMovement());
-            }
+            StartCoroutine(PerformPlayerMovement());
         }
         if (Input.GetAxisRaw("Cancel") != 0 && !moveSelected)
         {
@@ -236,11 +264,6 @@ public class BattleManager : MonoBehaviour
     
     private void HandlePlayerPartySelection()
     {
-        if (timeSinceLastClick < timeBetweenClicks)
-        {
-            return;
-        }
-
         if (Input.GetAxisRaw("Vertical") != 0)
         {
             timeSinceLastClick = 0;
@@ -254,9 +277,8 @@ public class BattleManager : MonoBehaviour
         currentSelectedPokymon = Mathf.Clamp(currentSelectedPokymon, 0, playerParty.Pokymons.Count - 1);
         partyHud.UpdateSelectedPokymon(currentSelectedPokymon);
 
-        if (Input.GetAxisRaw("Submit") != 0 && timeSinceLastSubmit > 1.2f)
+        if (Input.GetAxisRaw("Submit") != 0)
         {
-            timeSinceLastSubmit = 0;
             timeSinceLastClick = 0;
             var selectedPokymon = playerParty.Pokymons[currentSelectedPokymon];
             if (selectedPokymon.Hp <= 0)
@@ -290,25 +312,48 @@ public class BattleManager : MonoBehaviour
         state = BattleState.PerformMovement;
         
         Move move = playerUnit.Pokymon.Moves[currentSelectedMovement];
+        if (move.PP <= 0 && !playerUnit.Pokymon.CheckIfHasMovesWithPP())
+        {
+            battleDialogBox.ToggleMovements(false);
+            battleDialogBox.ToggleDialogText(true);
+            yield return battleDialogBox.WriteDialog("No quedan movimientos con PP.");
+            playerUnit.Hud.lastHp = playerUnit.Pokymon.Hp;
+            playerUnit.PlayReceiveAttackAnimation();
+            pokemonFainted = playerUnit.Pokymon.ReceiveAutoDamage(); 
+            playerUnit.Hud.UpdatePokemonData();
+            if (pokemonFainted)
+            {
+                playerUnit.PlayFaintAnimation();
+                yield return battleDialogBox.WriteDialog(
+                    string.Format("{0} se ha debilitado.", playerUnit.Pokymon.Base.Name));
+                yield return new WaitForSeconds(0.5f);
+                moveSelected = false;
+                CheckForBattleFinish(playerUnit);
+                yield break;
+            }
+            StartCoroutine(PerformEnemyMovement());
+            yield break;
+        }
         if (move.PP <= 0)
         {
             battleDialogBox.ToggleMovements(false);
             battleDialogBox.ToggleDialogText(true);
-            yield return battleDialogBox.WriteDialog("No quedan PPs para ese movimiento");
+            yield return battleDialogBox.WriteDialog("No quedan PPs para ese movimiento.");
+            yield return new WaitForSeconds(0.1f);
             PlayerMovementSelection();
+            yield break;
         }
 
         if (state == BattleState.PerformMovement)
         {
-            yield return RunMovement(playerUnit, enemyUnit, move);
-            if (enemyUnit.Pokymon.Speed <= playerUnit.Pokymon.Speed && !pokemonFainted)
+            if (enemyUnit.Pokymon.Speed <= playerUnit.Pokymon.Speed)
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return RunMovement(playerUnit, enemyUnit, move);
                 StartCoroutine(PerformEnemyMovement());
             }
-            else if (!pokemonFainted)
+            else
             {
-                PlayerMovementSelection();
+                StartCoroutine(PerformEnemyMovement());
             }
         }
     }
@@ -316,29 +361,57 @@ public class BattleManager : MonoBehaviour
     private IEnumerator PerformEnemyMovement()
     {
         state = BattleState.PerformMovement;
-        Move move;
         pokemonFainted = false;
-        do
-        {
-            move = enemyUnit.Pokymon.RandomMove();
-        } while (move.PP <= 0);
 
-        yield return RunMovement(enemyUnit, playerUnit, move);
-        if (enemyUnit.Pokymon.Speed > playerUnit.Pokymon.Speed && !pokemonFainted && !hasChangedPokymon)
+        if (enemyUnit.Pokymon.Hp <= 0)
         {
-            yield return new WaitForSeconds(0.5f);
-            StartCoroutine(PerformPlayerMovement());
+            CheckForBattleFinish(enemyUnit);
+            yield break;
         }
-        else if (!pokemonFainted)
+
+        Move move = enemyUnit.Pokymon.RandomMove();
+        if (move != null)
+        {
+            yield return RunMovement(enemyUnit, playerUnit, move);
+        }
+
+        if (playerUnit.Pokymon.CheckIfHasMovesWithPP() == false)
         {
             PlayerMovementSelection();
-            hasChangedPokymon = false;
+            yield break;
+        }
+
+        if (state == BattleState.PerformMovement)
+        {
+            if (!hasThrownAPokeball)
+            {
+                if (enemyUnit.Pokymon.Speed > playerUnit.Pokymon.Speed && !hasChangedPokymon)
+                {
+                    yield return RunMovement(playerUnit, enemyUnit, playerUnit.Pokymon.Moves[currentSelectedMovement]);
+                    PlayerMovementSelection();
+                }
+                else
+                {
+                    PlayerMovementSelection();
+                    hasChangedPokymon = false;
+                }
+            }
+            else
+            {
+                hasChangedPokymon = false;
+                hasThrownAPokeball = false;
+                StartCoroutine(PlayerActionSelection());
+            }
         }
     }
 
     private IEnumerator RunMovement(BattleUnit attacker, BattleUnit defender, Move move)
     {
         move.PP--;
+        if (attacker.IsPlayer && move.PP <= 0)
+        {
+            move.PP = 0;
+        }
         pokemonFainted = false;
         if (attacker.IsPlayer)
         {
@@ -386,21 +459,7 @@ public class BattleManager : MonoBehaviour
             }
             if (pokemonFainted)
             {
-                defender.PlayFaintAnimation();
-                if (!defender.IsPlayer)
-                {
-                    yield return battleDialogBox.WriteDialog(
-                        string.Format("El {0} rival se ha debilitado.", defender.Pokymon.Base.Name));
-                }
-                else
-                {
-                    yield return battleDialogBox.WriteDialog(
-                        string.Format("{0} se ha debilitado.", defender.Pokymon.Base.Name));
-                }
-                    
-                yield return new WaitForSeconds(0.5f);
-                moveSelected = false;
-                CheckForBattleFinish(defender);
+                yield return HandlePokymonFainted(defender);
             }
         }
         else
@@ -452,6 +511,10 @@ public class BattleManager : MonoBehaviour
         {
             damage = 0;
         }
+        if (move.Base.FixedPower > 0)
+        {
+            damage = move.Base.FixedPower;
+        }
     }
 
     private IEnumerator SwitchPokymon(Pokymon newPokymon)
@@ -468,6 +531,9 @@ public class BattleManager : MonoBehaviour
         battleDialogBox.SetPokymonMovements(newPokymon.Moves);
         yield return battleDialogBox.WriteDialog(string.Format("¡Ve {0}!", newPokymon.Base.Name));
         yield return new WaitForSeconds(0.5f);
+        battleDialogBox.ToggleActions(false);
+        battleDialogBox.ToggleMovements(false);
+        battleDialogBox.ToggleDialogText(true);
         if (lastPokymonHp > 0)
         {
             StartCoroutine(PerformEnemyMovement());
@@ -476,5 +542,213 @@ public class BattleManager : MonoBehaviour
         {
             StartCoroutine(PlayerActionSelection());
         }
+    }
+
+    private IEnumerator ThrowPokeball()
+    {
+        state = BattleState.Busy;
+
+        if (type != BattleType.WildPokymon)
+        {
+            yield return battleDialogBox.WriteDialog("No puedes robar los pokemon de otros entrenadores.");
+            state = BattleState.LoseTurn;
+            yield break;
+        }
+        
+        hasThrownAPokeball = true;
+        yield return battleDialogBox.WriteDialog(string.Format("Has lanzado una {0}.", pokeball.name));
+        var pokeballInst = Instantiate(pokeball, playerUnit.transform.position - new Vector3(2, 2), Quaternion.identity);
+
+        var pokeballSpt = pokeballInst.GetComponent<SpriteRenderer>();
+        yield return pokeballSpt.transform.DOLocalJump(enemyUnit.transform.position + new Vector3(0, 1.5f), 
+            2f, 1, 1f).WaitForCompletion();
+        yield return enemyUnit.PlayCapturedAnimation();
+        yield return pokeballSpt.transform.DOLocalMoveY(enemyUnit.transform.position.y - 2, 1f).WaitForCompletion();
+
+        var numberOfShakes = TryToCatchPokymon(enemyUnit.Pokymon);
+        for (int i = 0; i < Mathf.Min(numberOfShakes, 3); i++)
+        {
+            yield return new WaitForSeconds(0.5f);
+            yield return pokeballSpt.transform.DOPunchRotation(new Vector3(0, 0, 15), 0.6f).WaitForCompletion();
+        }
+
+        if (numberOfShakes == 4)
+        {
+            yield return battleDialogBox.WriteDialog(string.Format("¡Has capturado un {0}!", enemyUnit.Pokymon.Base.Name));
+            yield return pokeballSpt.DOFade(0, 1.5f).WaitForCompletion();
+
+            if (playerParty.AddPokymonToParty(enemyUnit.Pokymon))
+            {
+                yield return battleDialogBox.WriteDialog(string.Format("{0} se ha añadido a tu equipo", enemyUnit.Pokymon.Base.Name));
+            }
+            else
+            {
+                yield return battleDialogBox.WriteDialog("En algun momento lo mandaremos al PC.");
+            }
+            Destroy(pokeballInst);
+            BattleFinish(true);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.5f);
+            yield return pokeballSpt.DOFade(0, 0.2f);
+            yield return enemyUnit.PlayBreakOutAnimation();
+
+            if (numberOfShakes < 2)
+            {
+                yield return battleDialogBox.WriteDialog(string.Format("¡El {0} salvaje ha escapado!",
+                    enemyUnit.Pokymon.Base.Name));
+            }
+            else
+            {
+                yield return battleDialogBox.WriteDialog("¡Casi lo atrapas!");
+            }
+            Destroy(pokeballInst);
+            state = BattleState.LoseTurn;
+        }
+    }
+
+    private int TryToCatchPokymon(Pokymon pokymon)
+    {
+        float bonusPokeball = 1;    //TODO: clase pokemon con bonus
+        float bonusStat = 1;        //TODO: estados alterados
+        float a = ((3 * pokymon.MaxHp - 2 * pokymon.Hp) * pokymon.Base.CatchRate * bonusPokeball * bonusStat) /
+                  (3 * pokymon.MaxHp);
+        if (a >= 255)
+        {
+            return 4;
+        }
+        float b = 1048560 / Mathf.Sqrt(Mathf.Sqrt(16711680 / a));
+
+        int shakeCount = 0;
+        while (shakeCount < 4)
+        {
+            if (Random.Range(0, 65536) >= b)
+            {
+                break;
+            }
+            shakeCount++;
+        }
+
+        return shakeCount;
+    }
+
+    private IEnumerator TryToEscapeFromBattle()
+    {
+        state = BattleState.Busy;
+        battleDialogBox.ToggleActions(false);
+        if (type != BattleType.WildPokymon)
+        {
+            yield return battleDialogBox.WriteDialog("No puedes huir de combates contra entrenadores.");
+            state = BattleState.LoseTurn;
+            yield break;
+        }
+
+        int playerSpeed = playerUnit.Pokymon.Speed;
+        int enemySpeed = enemyUnit.Pokymon.Speed;
+        escapeAttemps++;
+        if (playerSpeed >= enemySpeed)
+        {
+            yield return battleDialogBox.WriteDialog("Has huido del combate.");
+            yield return new WaitForSeconds(1f);
+            BattleFinish(false);
+        }
+        else
+        {
+            int oddsScape = (Mathf.FloorToInt(playerSpeed * 128 / (float)enemySpeed) + 30 * escapeAttemps) % 256;
+            if (Random.Range(0, 256) < oddsScape)
+            {
+                yield return battleDialogBox.WriteDialog("Has huido del combate.");
+                yield return new WaitForSeconds(1f);
+                BattleFinish(false);
+            }
+            else
+            {
+                yield return battleDialogBox.WriteDialog("¡No puedes escapar!");
+                state = BattleState.LoseTurn;
+            }
+        }
+    }
+
+    private IEnumerator HandlePokymonFainted(BattleUnit faintedUnit)
+    {
+        faintedUnit.PlayFaintAnimation();
+        if (!faintedUnit.IsPlayer)
+        {
+            yield return battleDialogBox.WriteDialog(
+                string.Format("El {0} rival se ha debilitado.", faintedUnit.Pokymon.Base.Name));
+            int expBase = faintedUnit.Pokymon.Base.ExpBase;
+            int level = faintedUnit.Pokymon.Level;
+            float multiplier = (type == BattleType.WildPokymon ? 1 : 1.5f);
+            int wonExp = Mathf.FloorToInt((multiplier * level * expBase) / 7);
+            playerUnit.Pokymon.Experience += wonExp;
+            yield return battleDialogBox.WriteDialog(string.Format("{0} ha ganado {1} puntos de experiencia.", playerUnit.Pokymon.Base.Name, wonExp));
+            yield return playerUnit.Hud.SetSmoothExp();
+
+            while (playerUnit.Pokymon.NeedsToLevelUp())
+            {
+                playerUnit.Hud.SetLevelText();
+                playerUnit.Hud.lastHp = playerUnit.Pokymon.Hp;
+                playerUnit.Hud.UpdatePokemonData();
+                yield return battleDialogBox.WriteDialog(string.Format("¡{0} ha subido de nivel!", playerUnit.Pokymon.Base.Name));
+                //TODO: intentar aprender un nuevo movimiento
+                var newLearnableMove = playerUnit.Pokymon.GetLearnableMoveAtCurrentLevel();
+                if (newLearnableMove != null)
+                {
+                    if (playerUnit.Pokymon.Moves.Count < PokymonBase.NUMBER_OF_LEARNABLE_MOVES)
+                    {
+                        playerUnit.Pokymon.LearnMove(newLearnableMove);
+                        yield return battleDialogBox.WriteDialog(string.Format("¡{0} ha aprendido {1}!", playerUnit.Pokymon.Base.Name, newLearnableMove.Move.Name));
+                        battleDialogBox.SetPokymonMovements(playerUnit.Pokymon.Moves);
+                    }
+                    else
+                    {
+                        yield return battleDialogBox.WriteDialog(string.Format("¡{0} intenta aprender {1}!", playerUnit.Pokymon.Base.Name, newLearnableMove.Move.Name));
+                        yield return battleDialogBox.WriteDialog(string.Format("Pero no puede aprender mas de {0} movimientos...", PokymonBase.NUMBER_OF_LEARNABLE_MOVES));
+                        yield return ChooseMovementToForget(playerUnit.Pokymon, newLearnableMove.Move);
+                        yield return new WaitUntil(() => state != BattleState.ForgetMovement);
+                    }
+                }    
+                yield return playerUnit.Hud.SetSmoothExp(true);
+            }
+            yield return new WaitForSeconds(0.5f);
+        }
+        else
+        {
+            yield return battleDialogBox.WriteDialog(
+                string.Format("{0} se ha debilitado.", faintedUnit.Pokymon.Base.Name));
+        }
+                    
+        yield return new WaitForSeconds(0.5f);
+        moveSelected = false;
+        CheckForBattleFinish(faintedUnit);
+    }
+
+    private IEnumerator ChooseMovementToForget(Pokymon learner, MoveBase newMove)
+    {
+        state = BattleState.Busy;
+        yield return battleDialogBox.WriteDialog("Selecciona el movimiento que quieres olvidar:");
+        selectMoveUI.gameObject.SetActive(true);
+        selectMoveUI.SetMovements(learner.Moves.Select(mv => mv.Base).ToList(), newMove);
+        moveToLearn = newMove;
+        state = BattleState.ForgetMovement;
+    }
+    
+    private IEnumerator ForgetOldMove(int moveIndex)
+    {
+        selectMoveUI.gameObject.SetActive(false);
+        if (moveIndex == PokymonBase.NUMBER_OF_LEARNABLE_MOVES)
+        {
+            yield return battleDialogBox.WriteDialog(string.Format("{0} no ha aprendido {1}.", playerUnit.Pokymon.Base.Name, moveToLearn.Name));
+        }
+        else
+        {
+            var selectedMove = playerUnit.Pokymon.Moves[moveIndex].Base;
+            yield return battleDialogBox.WriteDialog(string.Format("¡{0} ha olvidado {1} y ha aprendido {2}!", playerUnit.Pokymon.Base.Name, selectedMove.Name, moveToLearn.Name));
+            playerUnit.Pokymon.Moves[moveIndex] = new Move(moveToLearn);
+        }
+
+        moveToLearn = null;
+        state = BattleState.Busy;
     }
 }

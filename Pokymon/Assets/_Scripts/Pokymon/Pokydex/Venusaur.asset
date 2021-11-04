@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9500de2355c2e4b93aa3e890cd1f17, type: 3}
   m_Name: Venusaur
   m_EditorClassIdentifier: 
-  ID: 3
+  id: 3
   _name: Venusaur
   description: "Despu\xE9s de un d\xEDa de lluvia, la flor de su lomo tiene un aroma
     m\xE1s potente y atrae a otros Pok\xE9mon."
@@ -26,3 +26,15 @@ MonoBehaviour:
   spAttack: 100
   spDefense: 100
   speed: 80
+  expBase: 208
+  catchRate: 45
+  growthRate: 3
+  learnableMoves:
+  - move: {fileID: 11400000, guid: 20163bae2088de44a97540d8a9bc2545, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 6877cb6ae2643a54ab47302cea2a66eb, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: d7ba14523d2d94644b06a509c8806930, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: 0ff1b65d42498be4797f6ba7d9ea1ec7, type: 2}
+    level: 1
